@@ -1,0 +1,14 @@
+<button (click)="readManualScrapedContent()">get data</button>
+<h1>excel importer</h1>
+<h2>table scrape importer</h2>
+	<button (click)="export()">Export!</button>
+	<input type="file" (change)="onFileChange($event)" multiple="false" />
+	<table class="sjs-table">
+		<tbody>
+      <tr *ngFor="let row of data">
+			<td *ngFor="let val of row">
+				{{val}}
+			</td>
+		</tr>
+    </tbody>
+	</table>
